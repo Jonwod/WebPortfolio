@@ -68,7 +68,7 @@
     <li>The implementation of the interactive elements of the virtual car.</li>
     <li>The functionality to take a screenshot and send it to the printer for printing. I achieved this using a simple Python http server to which I sent the screenshot from Unreal.</li>
     <li>Finding ways to compensate for the unreliability of the AR system's image detection in order to get a good sample of the user's coloured-in image.</li>
-    <li>Working with the Technical Director to solve a particularly tricky bug. To cut a long story short it was due to Unreal using 16-bit floating point numbers (unbeknown to us) in a shader when deployed to iPad. This was resulting in a major visual glitch due to a distance operation in the shader overflowing. 16-bit floats have a relatively low maximum value so because a distance operation involves taking a square it glitched out when the distance reached the relatively mundane value of 255 units. This was one of the highlights of the project for me.</li>
+    <li>Working with the Technical Director to solve a particularly tricky bug. To cut a long story short it was due to Unreal using 16-bit floating point numbers (unbeknown to us) in a shader when deployed to iPad. This was resulting in a major visual glitch due to a distance calculation in the shader overflowing. 16-bit floats have a relatively low maximum value so because a distance calculation involves taking a square it glitched out when the distance reached the relatively mundane value of 255 units. This was one of the highlights of the project for me.</li>
   </ul>
 </div>
 
@@ -89,8 +89,9 @@
 
 <div class="project">
   <h3>Space Game</h3>
-  <p>My first non-trivial programming project. It's a (pretty generic) 2d top down space shooter, not unlike the classic arcade game "Asteroids". This was only ever supposed to be a learning project, but it was extremely effective for learning C++ and game programming in general.</p>
-  <p>The comparatively low-level nature of SFML (as compared to game engines like UE4) provided a great introduction to a lot of the more low-level problems in game development.</p>
+  <p>A simple physics-based 2D game made with C++ and SFML. This was one of my very first programming projects and essentially my first non-trivial project using C++. As you'd expect, the code is awful, but it was an invaluable learning experience. The objective was to implement as much of the functionality as possible "from scratch" (barring the task of getting images on screen, for which I used SFML). I optimistically tried to invent my own collision detection algorithm. As you can see from the video, it sort of worked, although it was a bit unreliable and slow.</p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/7NKbE-E9Aq4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <p></p>
   <a href=https://github.com/Jonwod/SpaceGame target="_blank">Here's the source code on Github</a>
   <h4>Technology</h4>
   <ul>
@@ -102,11 +103,48 @@
 <div class="project">
   <h3>Simple Evolution Simulator</h3>
   <p>A fun little side project that I embarked upon for a brief break from Zero G Arena. I wanted to make a simulated environment with (imperfectly) self-replicating organisms. I did actually achieve this, although the result wasn't as interesting as I'd hoped. I would have liked to develop the project further (and I'm sure I'll do something like this again), but felt I needed to get back to Zero G Arena. </p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/ehleNUNyKGk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <p></p>
   <a href=https://github.com/Jonwod/SimpleEvolutionSimulator target="_blank">Here's the source code on Github</a>
   <h4>Technology</h4>
   <ul>
     <li>C++</li>
     <li>SFML</li>
+  </ul>
+</div>
+
+<div class = "project">
+  <h3>Other minor projects</h3>
+  <p>Here is a collection of some of my smaller projects, which are notable simply for being finished (although 'finished' is a somewhat ambiguous term).</p>
+  <ul>
+    <li><a href="https://github.com/Jonwod/SineOrgan" target="_blank">Sine Organ</a>
+    <p>This was my first foray into audio programming, which, as it transpires, is extremely interesting. This is just a polyphonic software instrument that plays sine waves. You play it using a computer keyboard. It was made using C++ and SDL.</p>
+    </li>
+    <li>
+      <a href=https://github.com/Jonwod/GameOfLife>Conway's Game of Life</a>
+      <p>I kept hearing about this "game of life", which sounded very interesting so this is just my quick implementation of it in C++, using SFML (as usual) for the display.</p>
+    </li>
+    <li>
+      <a href="https://github.com/Jonwod/terminal_snake">terminal_snake</a>
+      <p>This is just an implementation of the classic "snake" game which runs in a Linux terminal. I made this during a train journey. It uses C++ and the ncurses library.</p>
+    </li>
+    <li>
+      <a href="https://github.com/Jonwod/tower_of_hanoi">Tower of Hanoi Puzzle</a>
+      <p>This is an implementation of the "Tower of Hanoi" puzzle in Rust. The tower of hanoi puzzle was introduced to me at university to demonstrate the notion of exponential time complexity (the algorithm to solve it is O(2^n) for n disks). I therefore undertook this project to internalize this concept and to practice Rust programming.</p>
+    </li>
+    <li>
+      <a href="https://github.com/Jonwod/noughts_and_crosses">Noughts and Crosses in Rust</a>
+      <p>Another small Rust project. This time purely to get to grips with Rust.</p>
+    </li>
+    <li>
+      <a href="https://github.com/Jonwod/GraphSearch/blob/master/Search.py">Graph Search algorithms in Python</a>
+      <p>In my first semester at university we were taught about graph search algorithms. I decided to implement each of the search algorithms that we were taught in Python. It was very satisfying to finally wrap my head around the A* algorithm, which I had used before but never quite managed to internalize.</p>
+    </li>
+
+    <li>
+      <a href="https://github.com/Jonwod/rust_sort/blob/master/src/main.rs">Sorting algorithms in Rust</a>
+      <p>Another project I completed for revision purposes at university. This time an implementation of all the sorting algorithms we were taught, in Rust.</p>
+    </li>
   </ul>
 </div>
 
