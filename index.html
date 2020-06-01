@@ -32,7 +32,7 @@
 
 
 <h2> Projects with Cassette</h2>
-<p> I worked on the following projects while contracting as an Unreal Developer for Cassette, a department within the marketing company TRO. They were all made with the Unreal Engine. I used a mixture of C++ and Blueprint Visual Scripting on these projects.</p>
+<p> I worked on the following projects, as part of a small team, for Cassette, a department within the marketing company TRO. They were all made with the Unreal Engine. I used a mixture of C++ and Blueprint Visual Scripting on these projects.</p>
 
 <div class="project">
   <h3>BMW i-racing</h3>
@@ -42,6 +42,33 @@
   <ul>
     <li>Implementing much of the UI logic.</li>
     <li>Implementing much of the game logic, including state flow and a simple AI.</li>
+  </ul>
+</div>
+
+<div class="project">
+  <h3>BMW Explore Autonomy</h3>
+  <p>This was another application for BMW. This one was designed to inform people at Formula E races about autonomous driving. It featured a touchscreen display on which a physical model of a car could be placed for interactive sections.</p>
+  <a href="https://www.wearecassette.com/projects/bmw-explore-autonomy" target="_blank">More information about BMW Explore Autonomy on the Cassette website</a>
+  <p>My responsibilities on this project included:</p>
+  <ul>
+    <li>Implementing scripted sequences with various degrees of interactivity.</li>
+    <li>Again, much of the UI logic.</li>
+    <li>Scripting the behavior of pedestrians and other vehicles.</li>
+  </ul>
+  <p>This project was essentially a series of scripted sequences with relatively little interactivity. What interactivity there was, however, did complicate matters somewhat. In particular, some sections would require the user to move the physical car model in order to proceed to the next section. In some of these sections the car was "moving" (via scrolling of the virtual world, not movement of the physical model) which necessitated a dynamic world layout via a tiling system. The unpredictable timing of events also served to make the scripted sequences a lot trickier to implement than anticipated. Nonetheless, we completed the project and subsequent revisions on schedule.</p>
+</div>
+
+<div class="project">
+  <h3>Porsche Colour and Play</h3>
+  <p>This was an augmented-reality iPad application for Porsche which was featured at the Goodwood Festival of Speed. Users would colour in a picture of a Porsche car and then, after pointing the iPad's camera at their picture, the app would render a 3d version of the car, coloured in the way they had coloured their picture. They could then interact with the car in various ways and print off a picture of their custom-coloured Porsche.</p>
+  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6663348492351746048" allowfullscreen="" title="Embedded post" width="504" height="569" frameborder="0"></iframe>
+  <p>My responsibilities on this project included:</p>
+  <ul>
+    <li>Much of the UI implementation, including a custom radial menu.</li>
+    <li>The implementation of the interactive elements of the virtual car.</li>
+    <li>The functionality to take a screenshot and send it to the printer for printing. I achieved this using a simple Python http server to which I sent the screenshot from Unreal.</li>
+    <li>Finding ways to compensate for the unreliability of the AR system's image detection in order to get a good sample of the user's coloured-in image.</li>
+    <li>Working with the Technical Director to solve a particularly tricky bug. To cut a long story short it was due to Unreal using 16-bit floating point numbers (unbeknown to us) in a shader when deployed to iPad. This was resulting in a major visual glitch due to a distance operation in the shader overflowing. 16-bit floats have a relatively low maximum value so because a distance operation involves taking a square it glitched out when the distance reached the relatively mundane value of 255 units. This was one of the highlights of the project for me.</li>
   </ul>
 </div>
 
